@@ -2,9 +2,6 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\BarangKeluar */
-
 $this->title = 'Create Barang Keluar';
 $this->params['breadcrumbs'][] = ['label' => 'Barang Keluars', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;

@@ -3,9 +3,6 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\DetailBarangKeluar */
-/* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="detail-barang-keluar-form">
