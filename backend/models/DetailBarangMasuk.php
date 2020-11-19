@@ -4,31 +4,9 @@ namespace backend\models;
 
 use Yii;
 
-/**
- * This is the model class for table "detail_barang_masuk".
- *
- * @property int $id
- * @property int $barang_id
- * @property string $jumlah
- * @property string $ket
- * @property int $barang_masuk_id
- *
- * @property Barang $barang
- * @property BarangMasuk $barangMasuk
- */
 class DetailBarangMasuk extends \yii\db\ActiveRecord
 {
-    /**
-     * {@inheritdoc}
-     */
-    public static function tableName()
-    {
-        return 'detail_barang_masuk';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
+    
     public function rules()
     {
         return [
@@ -40,9 +18,7 @@ class DetailBarangMasuk extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
+   
     public function attributeLabels()
     {
         return [
@@ -54,21 +30,12 @@ class DetailBarangMasuk extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * Gets query for [[Barang]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
+
     public function getBarang()
     {
         return $this->hasOne(Barang::className(), ['id' => 'barang_id']);
     }
 
-    /**
-     * Gets query for [[BarangMasuk]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
     public function getBarangMasuk()
     {
         return $this->hasOne(BarangMasuk::className(), ['id' => 'barang_masuk_id']);

@@ -16,17 +16,7 @@ use Yii;
  */
 class BarangKeluar extends \yii\db\ActiveRecord
 {
-    /**
-     * {@inheritdoc}
-     */
-    public static function tableName()
-    {
-        return 'barang_keluar';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
+  
     public function rules()
     {
         return [
@@ -37,9 +27,6 @@ class BarangKeluar extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function attributeLabels()
     {
         return [
@@ -49,21 +36,12 @@ class BarangKeluar extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * Gets query for [[User]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
+
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
-    /**
-     * Gets query for [[DetailBarangKeluars]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
     public function getDetailBarangKeluars()
     {
         return $this->hasMany(DetailBarangKeluar::className(), ['barang_keluar_id' => 'id']);

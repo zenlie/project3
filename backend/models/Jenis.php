@@ -4,27 +4,16 @@ namespace backend\models;
 
 use Yii;
 
-/**
- * This is the model class for table "jenis".
- *
- * @property int $id
- * @property string $nm_jenis
- *
- * @property Barang[] $barangs
- */
+
 class Jenis extends \yii\db\ActiveRecord
 {
-    /**
-     * {@inheritdoc}
-     */
+    
     public static function tableName()
     {
         return 'jenis';
     }
 
-    /**
-     * {@inheritdoc}
-     */
+    
     public function rules()
     {
         return [
@@ -33,9 +22,7 @@ class Jenis extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
+   
     public function attributeLabels()
     {
         return [
@@ -44,11 +31,7 @@ class Jenis extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * Gets query for [[Barangs]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
+    
     public function getBarangs()
     {
         return $this->hasMany(Barang::className(), ['jenis_id' => 'id']);

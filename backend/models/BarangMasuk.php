@@ -4,18 +4,6 @@ namespace backend\models;
 
 use Yii;
 
-/**
- * This is the model class for table "barang_masuk".
- *
- * @property int $id
- * @property int $user_id
- * @property int $supplier_id
- * @property string $tgl_masuk
- *
- * @property Supplier $supplier
- * @property User $user
- * @property DetailBarangMasuk[] $detailBarangMasuks
- */
 class BarangMasuk extends \yii\db\ActiveRecord
 {
     /**
