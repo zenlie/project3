@@ -2,9 +2,6 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\DetailBarangKeluar */
-
 $this->title = 'Update Detail Barang Keluar: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Detail Barang Keluars', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
