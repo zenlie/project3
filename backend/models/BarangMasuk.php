@@ -6,17 +6,7 @@ use Yii;
 
 class BarangMasuk extends \yii\db\ActiveRecord
 {
-    /**
-     * {@inheritdoc}
-     */
-    public static function tableName()
-    {
-        return 'barang_masuk';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
+   
     public function rules()
     {
         return [
@@ -28,9 +18,7 @@ class BarangMasuk extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
+
     public function attributeLabels()
     {
         return [
@@ -41,31 +29,17 @@ class BarangMasuk extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * Gets query for [[Supplier]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
+
     public function getSupplier()
     {
         return $this->hasOne(Supplier::className(), ['id' => 'supplier_id']);
     }
 
-    /**
-     * Gets query for [[User]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
-    /**
-     * Gets query for [[DetailBarangMasuks]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
     public function getDetailBarangMasuks()
     {
         return $this->hasMany(DetailBarangMasuk::className(), ['barang_masuk_id' => 'id']);
