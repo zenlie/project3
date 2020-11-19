@@ -3,15 +3,12 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\Barang */
-/* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="barang-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+    
     <?= $form->field($model, 'nm_barang')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'stock_min')->textInput(['maxlength' => true]) ?>
