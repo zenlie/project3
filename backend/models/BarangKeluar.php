@@ -6,15 +6,11 @@ use Yii;
 
 class BarangKeluar extends \yii\db\ActiveRecord
 {
-<<<<<<< HEAD
-  
-=======
     public static function tableName()
     {
         return 'barang_keluar';
     }
 
->>>>>>> e5c767a12b66d0476315f663f6117f743be8e8c8
     public function rules()
     {
         return [
@@ -34,10 +30,6 @@ class BarangKeluar extends \yii\db\ActiveRecord
         ];
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e5c767a12b66d0476315f663f6117f743be8e8c8
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
