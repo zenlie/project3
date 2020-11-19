@@ -41,10 +41,10 @@ AppAsset::register($this);
         ['label' => 'Jenis', 'url' => ['/jenis/index']],
         ['label' => 'Supplier', 'url' => ['/supplier/index']],
         ['label' => 'Barang', 'url' => ['/barang/index']],
-        ['label' => 'Barang Keluar', 'url' => ['/barang-keluar/index']],
-        ['label' => 'Barang Masuk', 'url' => ['/barang-masuk/index']],
-        ['label' => 'Detail Barang Keluar', 'url' => ['/detail-barang-keluar/index']],
-        ['label' => 'Detail Barang Masuk', 'url' => ['/detail-barang-masuk/index']],
+        ['label' => 'BarangKeluar', 'url' => ['/barang-keluar/index']],
+        ['label' => 'BarangMasuk', 'url' => ['/barang-masuk/index']],
+        ['label' => 'DetailBarangKeluar', 'url' => ['/detail-barang-keluar/index']],
+        ['label' => 'DetailBarangMasuk', 'url' => ['/detail-barang-masuk/index']],
 
     ];
     if (Yii::$app->user->isGuest) {
